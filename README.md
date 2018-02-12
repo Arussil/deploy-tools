@@ -3,7 +3,7 @@ A series of fabric script for development and deploy of projects.
 
 ## Getting Started
 
-These instruction will get you, hopefully, a copy of the project up and running on your local machine for development and testing purposes. This is not tested for production enviroment at the moment. Do not use it for production, no, seriusly, it's not that good yet.
+These instruction will get you, hopefully, a copy of the project up and running on your local machine for development and testing purposes. This is not tested for production enviroment at the moment. Do not use it for production, no, seriously, it's not that good yet.
 
 ### Prerequisites
 As a preference for python project you should have a virtual enviroment up and running on your machine, a requirements.txt is included in the project for faster install in virtual env trough pip.
