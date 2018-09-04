@@ -3,7 +3,9 @@ import configparser, os, errno
 from fabric.api import env
 from fabric import colors
 
-from wordpress import createDevelopmentEnv
+from wordpress import createWordpressDevelopmentEnv
+
+from django import createDjangoDevelopmentEnv
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PROJECTS = os.path.join(os.path.sep, ROOT, 'projects')
@@ -32,12 +34,17 @@ def startLocalProject(config):
     except OSError as e:
         if e.errno != errno.EEXIST:
             raise
-   
+
     #Create the local develop enviroment
     if config['APP']['TYPE'] == 'wordpress':
         print(colors.green('Creating a Wordpress app project'))
         print(colors.green('Initializing Development Environment'))
-        createDevelopmentEnv(config)
+        createWordpressDevelopmentEnv(config)
+
+    if config['APP']['TYPE'] == 'django':
+        print(colors.green('Creating a Django app project'))
+        print(colors.green('Initializing Development Environment'))
+        createDjangoDevelopmentEnv(config)
 
 def listProjects():
     """

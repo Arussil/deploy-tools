@@ -24,5 +24,5 @@ def createVagrant(config):
         #Install the machine
         local('vagrant up')
 
-def createDevelopmentEnv(config):
+def createWordpressDevelopmentEnv(config):
     createVagrant(config)
